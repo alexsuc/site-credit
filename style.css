@@ -1,0 +1,222 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px; /* увеличено для двух карточек */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff3366;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+/* Сетка для карточек */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Карточка партнера */
+.credit-card {
+  background: linear-gradient(to bottom, #eea2d5, #f2eaff);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+.partner-badge {
+  background-color: #a259ff;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  max-width: 100px;
+  margin: 30px auto 15px;
+}
+
+.offer-details p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.get-money-link {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Стили для других элементов (если нужны) */
+.card {
+  background-color: #fff;
+  color: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+  color: #3366ff;
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.btn {
+  display: block;
+  background-color: #ff3366;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #d100ff;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Футер */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 0px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer__copyright {
+  flex: 1 1 auto;
+  min-width: 250px;
+  text-align: left;
+}
+
+.footer__nav {
+  flex: 0 1 auto;
+}
+
+.footer__list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__item a:hover {
+  color: #007bff;
+}
+
+/* Адаптивність футера */
+@media (max-width: 768px) {
+  .footer__content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer__copyright {
+    text-align: center;
+  }
+}
+
+/* Анімація блимання для кнопки */
+@keyframes pulse-animation {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(245, 31, 95, 0.7); /* Початкова тінь для ефекту пульсу */
+  }
+  70% {
+    transform: scale(1.05); /* Збільшення розміру кнопки */
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0); /* Розширюємо тінь, робимо її прозорою */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+/* Застосування анімації до кнопки */
+.get-money-link {
+  /* Ваші існуючі стилі кнопки */
+  display: inline-block; /* Забезпечує, що transform працює правильно */
+  padding: 10px 20px;
+  background-color: #bb0000; /* Приклад кольору фону */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Додайте перехід для ховеру */
+
+  /* Властивості анімації */
+  animation: pulse-animation 2s infinite; /* Назва анімації, тривалість, нескінченно */
+}
+
+.get-money-link:hover {
+  background-color: #a30000; /* Зміна кольору при наведенні */
+}
